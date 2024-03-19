@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/andika</item>
+        <item>@font/autour_one</item>
+        <item>@font/autour_one</item>
+        <item>@font/chicle</item>
+        <item>@font/days_one</item>
+        <item>@font/jockey_one</item>
+        <item>@font/mukta_extralight</item>
+        <item>@font/viga</item>
+    </array>
+</resources>

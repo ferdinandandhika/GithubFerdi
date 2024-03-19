@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GithubFerdi</string>
+    <string name="searchbar_clue">Search Github Account</string>
+    <string name="usernameText">username</string>
+    <string name="userimg">userImage</string>
+    <string name="tab_1">Followers</string>
+    <string name="tab_2">Following</string>
+    <string name="show">Show Button</string>
+    <string name="back">Back</string>
+    <string name="share">Share</string>
+    <string name="followerDtl">Followers"</string>
+    <string name="followingDtl">Following</string>
+    <string name="follower_many">%d Followers</string>
+    <string name="following_many">%d Following</string>
+    <string name="followText">Following and Follower</string>
+    <string name="followView">Following and Follower</string>
+    <string name="mode">Light and Dark Mode</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailUser"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true"
+    android:background="@color/Secondary"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/back1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="8dp"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/github"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:padding="8dp"
+                android:src="@drawable/github" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/favorite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:padding="8dp"
+                android:src="@drawable/baseline_favorite_24" />
+
+            <TextView
+                android:id="@+id/nameaccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/autour_one"
+                android:text="User account"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="82dp"
+                tools:layout_editor_absoluteY="10dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ToggleButton
+            android:id="@+id/fav"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/fav_button"
+            android:contentDescription="@string/show"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/black"
+            android:clickable="true"
+            android:contentDescription="@string/show"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/baseline_share_24"
+            tools:ignore="RedundantDescriptionCheck"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userDtl"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/nameDtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/autour_one"
+            tools:text="@string/usernameText"
+            android:textColor="@color/Accent"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/userDtl"
+            app:layout_constraintStart_toStartOf="@+id/userDtl"
+            app:layout_constraintTop_toBottomOf="@+id/userDtl" />
+
+        <TextView
+            android:id="@+id/usernameDtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/viga"
+            android:textColor="@color/Accent"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/nameDtl"
+            app:layout_constraintStart_toStartOf="@+id/nameDtl"
+            app:layout_constraintTop_toBottomOf="@+id/nameDtl"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/bioDtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/viga"
+            tools:text="bio"
+            android:textAlignment="center"
+            android:textColor="@color/Accent"
+            app:layout_constraintEnd_toEndOf="@+id/usernameDtl"
+            app:layout_constraintStart_toStartOf="@+id/usernameDtl"
+            app:layout_constraintTop_toBottomOf="@+id/usernameDtl" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="251dp"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/bioDtl"
+            app:layout_constraintStart_toStartOf="@+id/bioDtl"
+            app:layout_constraintTop_toBottomOf="@+id/bioDtl">
+
+            <TextView
+                android:id="@+id/followersDtl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/viga"
+                android:textColor="@color/Accent"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/baseline_people_alt_24"
+                tools:text="@string/followerDtl" />
+
+            <TextView
+                android:id="@+id/followingDtl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/viga"
+                android:textColor="@color/Accent"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/baseline_people_alt_24"
+                tools:text="@string/followingDtl" />
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:tabIndicatorColor="@color/Accent"
+            android:contentDescription="@string/followText"
+            app:tabTextColor="@color/Accent"
+            android:background="@color/Secondary"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/followView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            app:layout_constraintVertical_bias="0.0"
+            android:background="@drawable/bg_day"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/Accent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
